@@ -1,0 +1,102 @@
+.heading {
+  font-size: 3rem;
+  margin: 2rem auto;
+  text-align: center;
+  color: var(--primary);
+}
+
+.section {
+  &_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_or {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    &_text {
+      font-size: 1.5rem;
+      color: #1098ad;
+    }
+  }
+
+  &_form {
+    margin: 4rem auto;
+    // margin-bottom: 2em;
+    &_box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+
+      &_label {
+        font-size: 2rem;
+        display: block;
+        color: #222;
+        font-weight: 900;
+      }
+      &_input {
+        width: 100%;
+        height: 3rem;
+        margin-bottom: 2rem;
+        border: none;
+        background-color: aliceblue;
+        @include respond(PHONE) {
+          height: 5rem;
+        }
+      }
+    }
+    &_p {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    &_btn {
+      &,
+      &:link,
+      *:visited {
+        font-size: 2rem;
+        color: #fff;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        padding: 1rem;
+        width: 100%;
+        transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: none;
+      }
+
+      &:hover {
+        background: linear-gradient(to right, #040e12, #2d383b, #032837);
+        cursor: pointer;
+        transition: all 3s ease;
+      }
+    }
+
+    &_theme {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      div {
+        transition: all 5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      &_mode {
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-duration: 500ms;
+      }
+    }
+  }
+}
+
+.underline {
+  width: 100%;
+  border-bottom: 2px solid rgb(80, 72, 72);
+}

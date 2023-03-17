@@ -1,0 +1,11 @@
+.wrapper {
+  width: 50%;
+  margin: 5rem auto;
+  background-color: #fff;
+  padding: 2rem;
+
+  @include respond(PHONE) {
+    width: 90vw;
+  }
+  // height: 70vh;
+}
